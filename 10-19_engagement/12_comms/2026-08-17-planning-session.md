@@ -28,7 +28,7 @@ The September 1 start date is being pushed out due to delays in finalising the M
 
 ### ECH Blockers
 - Getting Bedrock up and running
-- Models not provisioned — requires marketplace approval
+- Models not provisioned  - requires marketplace approval
 - Model dependency issues
 - Denny has written this up (reference his document)
 

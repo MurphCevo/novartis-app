@@ -1,4 +1,4 @@
-# cs-frame — {client}-{engagement}
+# cs-frame  - {client}-{engagement}
 > Drop this into 19_inbox/ at engagement start. Populate throughout. Promote to 43_outcomes/ at close.
 
 ---

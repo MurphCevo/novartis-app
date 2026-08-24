@@ -2,7 +2,7 @@
 
 ## Context
 
-{2–3 sentences: why this engagement exists, what triggered it.}
+{2 -3 sentences: why this engagement exists, what triggered it.}
 
 ---
 
@@ -18,4 +18,4 @@
 
 ## Assumptions
 
-- {Working assumptions that underpin the objectives — flag these early so they can be validated in discovery}
+- {Working assumptions that underpin the objectives  - flag these early so they can be validated in discovery}

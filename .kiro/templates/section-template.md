@@ -105,4 +105,4 @@
 | 2 | {Question answerable with evidence} | |
 | 3 | {Question} | |
 
-> **Status values:** ✅ Confirmed | ⚠️ Partial | ❌ Not met | — Not yet assessed
+> **Status values:** ✅ Confirmed | ⚠️ Partial | ❌ Not met |  - Not yet assessed

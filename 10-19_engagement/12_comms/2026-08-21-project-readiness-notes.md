@@ -1,4 +1,4 @@
-# Project Readiness Checklist — Working Notes
+# Project Readiness Checklist  - Working Notes
 
 **Date:** 2026-08-21
 **Author:** (not captured)
@@ -19,7 +19,7 @@ Working notes toward the Project Readiness Checklist artefact (to be published o
 | Category | Detail |
 |----------|--------|
 | **Services** | Bedrock, AgentCore, etc. |
-| **Marketplace** | Model provisioning — including documentation link, FTU, etc. |
+| **Marketplace** | Model provisioning  - including documentation link, FTU, etc. |
 | **Cross-region inference** | Transparent HA with Melbourne (from Sydney); varies by region and model. Can it be turned off? (Appears not.) See also enforcing data residency to a single region. |
 | **Org / Account / SCPs / Permissions** | Account structure and guardrails |
 | **Connectivity & routing** | Consider additional channels: email, etc. |
@@ -55,7 +55,7 @@ Working notes toward the Project Readiness Checklist artefact (to be published o
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
 | 1 | Can cross-region inference be disabled to enforce data residency? | TBD | Open |
-| 2 | AI Shared Services account vs. project-specific — which pattern? | TBD | Open |
+| 2 | AI Shared Services account vs. project-specific  - which pattern? | TBD | Open |
 | 3 | Do we need an AI Gateway? | TBD | Open |
 | 4 | Client infra staff: dedicated or BAU queue? | TBD | Open |
 | 5 | Model governance: what's the org's current model whitelist process? | TBD | Open |
@@ -65,4 +65,4 @@ Working notes toward the Project Readiness Checklist artefact (to be published o
 ## References
 
 - Slack thread on cross-region inference & data residency: [link](https://cevoteam.slack.com/archives/C057A0RUF28/p1786033725442329)
-- Good example format: *Resilience Review — Cloud Evolution Practice* (Confluence)
+- Good example format: *Resilience Review  - Cloud Evolution Practice* (Confluence)

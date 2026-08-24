@@ -78,7 +78,7 @@ Collaborates with: [Peer roles]
 
   -  [How performance of this role is measured]
 
-### RACI Position (defaults — override per process)
+### RACI Position (defaults  - override per process)
 
 Responsible for:       [Core process ownership]
 Accountable for:      [Where this role is the final decision-maker]

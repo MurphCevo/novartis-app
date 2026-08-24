@@ -1,4 +1,4 @@
-# Team Persona — {Team Name}
+# Team Persona  - {Team Name}
 
 | Attribute | Value |
 |---|---|

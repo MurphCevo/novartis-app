@@ -8,7 +8,7 @@
 
 ## Summary
 
-Initial planning session. The engagement is modelled on a prior Arinco project and is milestone-based. Core work involves connecting 7–8 systems via API gateways or MCP servers — this is fundamentally an integration project. Timeline is 14 weeks / 7 sprints, targeting 3 agents delivered. Documentation is in GitHub. Target start date discussed as August 28. Discussion also covered the need for Cevo-level project visibility, stream mapping, and product management across three workstreams.
+Initial planning session. The engagement is modelled on a prior Arinco project and is milestone-based. Core work involves connecting 7 -8 systems via API gateways or MCP servers  - this is fundamentally an integration project. Timeline is 14 weeks / 7 sprints, targeting 3 agents delivered. Documentation is in GitHub. Target start date discussed as August 28. Discussion also covered the need for Cevo-level project visibility, stream mapping, and product management across three workstreams.
 
 ---
 
@@ -19,7 +19,7 @@ Initial planning session. The engagement is modelled on a prior Arinco project a
 - Paid on milestones
 
 ### Scope & Nature
-- 7–8 systems to connect
+- 7 -8 systems to connect
 - Need to assess fit-for-purpose of API gateways vs. MCP servers
 - This is fundamentally an **integration project**
 - Risk around data integration needs to be managed
@@ -49,7 +49,7 @@ Initial planning session. The engagement is modelled on a prior Arinco project a
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
 | 1 | Who are the integration contacts for frictionless delivery? | TBD | Open |
-| 2 | API gateway vs. MCP server — which pattern fits each system? | TBD | Open |
+| 2 | API gateway vs. MCP server  - which pattern fits each system? | TBD | Open |
 | 3 | Where is the Cevo-level project priority view? | TBD | Open |
 | 4 | How will product management be handled across 3 streams? | TBD | Open |
 

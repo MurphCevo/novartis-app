@@ -1,4 +1,4 @@
-# Marketing Content Supply Chain — Journey Map
+# Marketing Content Supply Chain  - Journey Map
 
 **Status:** Draft
 **Source:** journey-map.png (10-19_engagement/11_governance/)
@@ -49,7 +49,7 @@ Medical, Legal, and Regulatory (MLR) reviewers evaluate all content to ensure it
 
 ### 5. Tools
 
-The technology layer across each stage — the systems used by each actor to perform their activities.
+The technology layer across each stage  - the systems used by each actor to perform their activities.
 
 ### 6. KPI (Metrics)
 
@@ -64,9 +64,9 @@ Key performance indicators measured at each stage of the supply chain.
 | Actor | Activities |
 |---|---|
 | **Marketing & Execution** | Define campaign objectives → Identify target audience → Conduct desktop research → Review past campaign performance → Gather existing materials → Generate content ideas / draft initial outline using AI → Create campaign brief → Align stakeholders on brief |
-| **Creative Agency** | — (not yet engaged) |
-| **Reviewers** | — (not yet engaged) |
-| **Vendors** | — (not yet engaged) |
+| **Creative Agency** |  - (not yet engaged) |
+| **Reviewers** |  - (not yet engaged) |
+| **Vendors** |  - (not yet engaged) |
 
 **Tools:** Sherlock, SharePoint, Snowflake/CDH, Google Analytics 4, Copilot Researcher
 
@@ -83,7 +83,7 @@ Key performance indicators measured at each stage of the supply chain.
 |---|---|
 | **Marketing & Execution** | Write/edit copy internally OR brief agency → Draft campaign messaging → Adapt copy for channels → Prepare reference pack for compliance |
 | **Creative Agency** | Receive brief → Develop copy concepts → Produce copy drafts → Iterate based on feedback |
-| **Reviewers** | — (not yet engaged at this stage, but references being prepared) |
+| **Reviewers** |  - (not yet engaged at this stage, but references being prepared) |
 
 **Tools:** Copilot Researcher, Content Engine, Microsoft 365, BeeFree
 
@@ -100,7 +100,7 @@ Key performance indicators measured at each stage of the supply chain.
 |---|---|
 | **Marketing & Execution** | Brief design requirements → Review creative outputs → Approve or request revisions → Prepare files for compliance submission |
 | **Creative Agency** | Receive design brief → Create visual assets (emails, banners, print, CRMs) → Adapt templates → Format for platforms → Deliver final assets |
-| **Reviewers** | — (not yet engaged) |
+| **Reviewers** |  - (not yet engaged) |
 
 **Tools:** Canva, Figma, PowerPoint, ShamanGo, Anthill Activator, Adobe Creative Suite
 
@@ -134,8 +134,8 @@ Key performance indicators measured at each stage of the supply chain.
 | Actor | Activities |
 |---|---|
 | **Marketing & Execution** | Schedule and publish approved content → Configure journeys/campaigns in platforms → QA published assets → Coordinate vendor distribution |
-| **Creative Agency** | — (limited involvement; may support technical publishing) |
-| **Reviewers** | — (post-approval, no involvement) |
+| **Creative Agency** |  - (limited involvement; may support technical publishing) |
+| **Reviewers** |  - (post-approval, no involvement) |
 | **Vendors** | Receive approved assets → Distribute across media channels → Confirm placement → Report delivery |
 
 **Tools:** Salesforce Marketing Cloud (SFMC), Veeva Oncore CRM, Drupal, Publisher portals, Aprimo/Fuse

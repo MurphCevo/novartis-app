@@ -1,4 +1,4 @@
-# [Service Name] — Service Design Package
+# [Service Name]  - Service Design Package
 
 ## Document Control
 
@@ -133,7 +133,7 @@
 
 ### Data
 
-<!-- Guidance: Complete if applicable — describe database technologies, key data entities, and how data moves through the system. -->
+<!-- Guidance: Complete if applicable  - describe database technologies, key data entities, and how data moves through the system. -->
 
 **Database Design**
 
@@ -231,15 +231,15 @@
 
 | Tier                          | Detail |
 | ----------------------------- | ------ |
-| Tier 1 — Service Desk        |        |
-| Tier 2 — Application Support |        |
-| Tier 3 — Engineering / Vendor|        |
+| Tier 1  - Service Desk        |        |
+| Tier 2  - Application Support |        |
+| Tier 3  - Engineering / Vendor|        |
 | Support Hours                 |        |
 | After-Hours Support           |        |
 
 ### Escalation Path
 
-| Tier 1 — Triage | Tier 2 — Support | Tier 3 — Engineering | Vendor / Specialist |
+| Tier 1  - Triage | Tier 2  - Support | Tier 3  - Engineering | Vendor / Specialist |
 | ---------------- | ----------------- | -------------------- | ------------------- |
 | →                | →                 | →                    | ✓                   |
 
@@ -498,25 +498,25 @@
 
 ## Appendices
 
-### Appendix A — Glossary
+### Appendix A  - Glossary
 
 | Term | Definition |
 | ---- | ---------- |
 |      |            |
 
-### Appendix B — User & Account Register
+### Appendix B  - User & Account Register
 
 | User Group | Role / Access Level | Volume | Operating Hours |
 | ---------- | ------------------- | ------ | --------------- |
 |            |                     |        |                 |
 
-### Appendix C — Key Contacts
+### Appendix C  - Key Contacts
 
 | Name | Role | Organisation | Contact Details |
 | ---- | ---- | ------------ | --------------- |
 |      |      |              |                 |
 
-### Appendix D — References
+### Appendix D  - References
 
 - ITIL 4 Foundation
 - ISO/IEC 20000

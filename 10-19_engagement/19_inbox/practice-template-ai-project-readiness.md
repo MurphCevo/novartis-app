@@ -1,4 +1,4 @@
-# AI / Agentic App — Project Readiness Checklist
+# AI / Agentic App  - Project Readiness Checklist
 
 **Status:** DRAFT
 **Owner:** Cloud Evolution Practice
@@ -11,7 +11,7 @@
 1. Copy this template into the engagement workspace at kickoff
 2. Walk through each section with the client's platform/infra team in the first week
 3. Mark items as confirmed (✅), outstanding (⏳), or blocked (🚫)
-4. Items marked "Day One" are pre-requisites — the delivery team cannot start meaningful work without them
+4. Items marked "Day One" are pre-requisites  - the delivery team cannot start meaningful work without them
 5. Items marked "Week 2+" can be resolved in parallel with early discovery/design work
 
 ---
@@ -30,7 +30,7 @@
 | 1.1.6 | Notification services: SES, SNS, or equivalent (if comms channels in scope) | Week 2+ | | |
 | 1.1.7 | Observability: CloudWatch, X-Ray, and/or LLM-specific tooling (Langfuse, LangSmith) | Week 2+ | | |
 
-> **Practitioner note:** Confirm the full list of required services early — SCP restrictions often block services silently, and unblocking takes time through client change processes.
+> **Practitioner note:** Confirm the full list of required services early  - SCP restrictions often block services silently, and unblocking takes time through client change processes.
 
 ### 1.2 Model Access (Marketplace & Provisioning)
 
@@ -61,7 +61,7 @@
 | # | Item | Priority | Status | Notes |
 |---|------|----------|--------|-------|
 | 1.4.1 | Account structure understood (standalone, or within an org with multiple OUs?) | Day One | | |
-| 1.4.2 | SCPs reviewed — known service/region restrictions documented | Day One | | |
+| 1.4.2 | SCPs reviewed  - known service/region restrictions documented | Day One | | |
 | 1.4.3 | Process and SLA for SCP exceptions / whitelisting documented | Day One | | |
 | 1.4.4 | IAM roles for delivery team provisioned (federated SSO or direct) | Day One | | |
 | 1.4.5 | Service roles for workloads (Lambda execution role, ECS task role, Bedrock invoke role) | Week 2+ | | |
@@ -92,12 +92,12 @@
 
 ## 2. Platform Decisions (Confirm Early)
 
-These are architectural decisions that should be resolved in the first 1–2 weeks. Deferring them creates rework.
+These are architectural decisions that should be resolved in the first 1 -2 weeks. Deferring them creates rework.
 
 | # | Decision | Options to Consider | Status | Decision |
 |---|----------|---------------------|--------|----------|
 | 2.1 | Bedrock isolation model | Dedicated AI Shared Services account vs. project-scoped account | | |
-| 2.2 | AI Gateway pattern | Centralised gateway for routing, rate limiting, logging, cost attribution — or direct invocation? | | |
+| 2.2 | AI Gateway pattern | Centralised gateway for routing, rate limiting, logging, cost attribution  - or direct invocation? | | |
 | 2.3 | Multi-agent orchestration | Bedrock Agents, AgentCore, LangGraph, CrewAI, custom, or other? | | |
 | 2.4 | LLM observability approach | Native (CloudWatch + X-Ray), Langfuse, LangSmith, or custom? | | |
 | 2.5 | IaC approach | CDK, Terraform, CloudFormation, or client-mandated? | | |
@@ -144,7 +144,7 @@ These are architectural decisions that should be resolved in the first 1–2 wee
 | 4.7 | PII/PHI handling requirements (masking, tokenisation, DLP) | Day One | | |
 | 4.8 | Encryption requirements: at rest and in transit (CMK vs. AWS-managed) | Week 2+ | | |
 
-> **Practitioner note:** "Sample data" doesn't need to be perfect — even a few representative records or a schema document is enough to start building. The alternative is building blind and reworking when real data arrives.
+> **Practitioner note:** "Sample data" doesn't need to be perfect  - even a few representative records or a schema document is enough to start building. The alternative is building blind and reworking when real data arrives.
 
 ---
 
@@ -159,7 +159,7 @@ These are architectural decisions that should be resolved in the first 1–2 wee
 | 5.5 | Escalation path: when requests are blocked or SLA missed, who do we go to? | Day One | | |
 | 5.6 | Product owner / business stakeholder available for regular showcases? | Day One | | |
 
-> **Practitioner note:** The single biggest velocity risk is not technical — it's whether infra requests sit in a BAU queue with a 2-week SLA while sprint commitments assume 2-day turnaround. Surface this in week one and agree a working model.
+> **Practitioner note:** The single biggest velocity risk is not technical  - it's whether infra requests sit in a BAU queue with a 2-week SLA while sprint commitments assume 2-day turnaround. Surface this in week one and agree a working model.
 
 ---
 
@@ -168,7 +168,7 @@ These are architectural decisions that should be resolved in the first 1–2 wee
 | # | Item | Priority | Status | Notes |
 |---|------|----------|--------|-------|
 | 6.1 | AI governance framework: does the client have one? What approvals are needed? | Day One | | |
-| 6.2 | Data must not be used to train base models — confirmed and enforceable? | Day One | | |
+| 6.2 | Data must not be used to train base models  - confirmed and enforceable? | Day One | | |
 | 6.3 | Audit logging requirements: query/response logging for LLM interactions | Week 2+ | | |
 | 6.4 | Role-based access control: admin vs. developer vs. end-user boundaries | Week 2+ | | |
 | 6.5 | Penetration testing / security review required before go-live? | Week 2+ | | |
@@ -196,4 +196,4 @@ Send this to the client ahead of engagement start as the minimum set:
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| 0.1 | 2026-08-21 | — | Initial draft from ECH review and planning session notes |
+| 0.1 | 2026-08-21 |  - | Initial draft from ECH review and planning session notes |

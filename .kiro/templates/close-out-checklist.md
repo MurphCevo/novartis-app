@@ -16,7 +16,7 @@
 
 - [ ] Client knows where all artefacts live (Confluence / SharePoint / shared repo walkthrough)
 - [ ] Open threads and assumptions have a named owner on the client side
-- [ ] Roadmap / recommendations are self-sufficient — someone picking it up in 6 months can act without calling us
+- [ ] Roadmap / recommendations are self-sufficient  - someone picking it up in 6 months can act without calling us
 - [ ] Any tooling, templates, or reference material has been handed over (not just linked)
 
 ## 3. Stakeholder close
@@ -39,7 +39,7 @@
 
 - [ ] Case study frame (`cs-frame.md`) finalised and promoted to `43_outcomes/`
 - [ ] Lessons learned captured (what worked, what we'd change, reusable patterns)
-- [ ] `19_inbox/` cleared — items promoted or deleted
+- [ ] `19_inbox/` cleared  - items promoted or deleted
 - [ ] Superseded material moved to `51_superseded/`
 - [ ] Engagement artefacts backed up per Cevo retention policy
 

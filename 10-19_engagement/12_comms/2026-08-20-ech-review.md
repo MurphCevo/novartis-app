@@ -29,7 +29,7 @@ Session focused on identifying pre-requisites for standing up Agentic AI infrast
 - What models are in use? How do we request new models?
 
 ### Ways of Working
-- What is the SOP for tech work — client laptop or virtual desktop?
+- What is the SOP for tech work  - client laptop or virtual desktop?
 
 ### Phase 1 Timeline
 - Phase 1 completed date: **2 weeks from start date**

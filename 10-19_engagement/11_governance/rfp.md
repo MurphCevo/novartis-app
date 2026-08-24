@@ -1,4 +1,4 @@
-# Request for Proposal ("RFP") — Project Autopilot
+# Request for Proposal ("RFP")  - Project Autopilot
 
 **CONFIDENTIAL**
 
@@ -44,12 +44,12 @@ Our Innovative Medicines group commercialises innovative, patented primary care 
 
 Our businesses are supported by global organisations with leading capabilities in research, development, manufacturing, and business services:
 
-- **Biomedical Research** — The innovation engine of Novartis, focusing on discovering new drugs that can change the practice of medicine.
-- **Development** — Oversees clinical development of new medicines that early research indicates may be safe and effective.
-- **Operations** — The manufacturing and business services backbone of the company, including:
+- **Biomedical Research**  - The innovation engine of Novartis, focusing on discovering new drugs that can change the practice of medicine.
+- **Development**  - Oversees clinical development of new medicines that early research indicates may be safe and effective.
+- **Operations**  - The manufacturing and business services backbone of the company, including:
   - Novartis Technical Operations (global manufacturing)
   - Novartis Business Services (consolidated support services driving efficiency, standardisation and simplification)
-- **Global Functions** — Support and deliver to the organisation horizontally, including Corporate Affairs, Ethics Risk and Compliance (ERC), Finance, Global Security & Legal, Internal Audit, People & Organization (P&O) and Strategy & Growth.
+- **Global Functions**  - Support and deliver to the organisation horizontally, including Corporate Affairs, Ethics Risk and Compliance (ERC), Finance, Global Security & Legal, Internal Audit, People & Organization (P&O) and Strategy & Growth.
 
 For more information, please visit [www.novartis.com](https://www.novartis.com).
 
@@ -65,10 +65,10 @@ For more information, please visit [www.novartis.com](https://www.novartis.com).
 |---|---|---|
 | RFP Issue Date | 29/1/2026 | Novartis issues RFP to Suppliers |
 | RFP Responses Due Date | 10/2/2026 | Deadline for Supplier to submit complete written RFP |
-| Evaluation Meetings | w/c 16–23 Feb 2026 | Supplier Presentations, enabling Novartis to complete evaluation and final partner selection |
-| Partner Selection | w/c 23 Feb – 9 Mar 2026 | Contract terms and procurement processes completed |
-| Project Initiation | w/c 16 Mar – 20 Apr | Internal project initiation at Novartis, including team structure alignment and assembly, and vendor set up as contractor for access to Novartis systems |
-| PoC Phase | w/c 27 Apr 2026 – w/c 24 Aug 2026 | Delivery of 3x PoC agents, and Autopilot Assistant for evaluation and go/no-go decision on full scale up |
+| Evaluation Meetings | w/c 16 -23 Feb 2026 | Supplier Presentations, enabling Novartis to complete evaluation and final partner selection |
+| Partner Selection | w/c 23 Feb  - 9 Mar 2026 | Contract terms and procurement processes completed |
+| Project Initiation | w/c 16 Mar  - 20 Apr | Internal project initiation at Novartis, including team structure alignment and assembly, and vendor set up as contractor for access to Novartis systems |
+| PoC Phase | w/c 27 Apr 2026  - w/c 24 Aug 2026 | Delivery of 3x PoC agents, and Autopilot Assistant for evaluation and go/no-go decision on full scale up |
 
 ### 2b. Contact Information
 
@@ -76,7 +76,7 @@ All inquiries/questions concerning the content of the RFP must be in writing and
 
 > **Minnie Lee**
 > Minnie.lee@novartis.com
-> Regional Sourcing Manager — IT category
+> Regional Sourcing Manager  - IT category
 
 All inquiries/questions regarding the Ariba system can be submitted by email to:
 esourcing.support@novartis.com
@@ -164,7 +164,7 @@ Create a multi-agentic AI solution for our proof-of-concept phase. All agents to
 
 ### 5b. Functional Requirements
 
-#### Use Case 4 — Knowledge Discovery (Campaign Design Assistance)
+#### Use Case 4  - Knowledge Discovery (Campaign Design Assistance)
 
 - A search experience that understands user intent and retrieves the right materials even when phrasing varies (e.g. searching "HCP adherence campaigns" or "congress summary templates" yields the same relevant content)
 - End user can refine outputs using filters (market, channel, audience, asset type, time since creation, provenance)
@@ -173,7 +173,7 @@ Create a multi-agentic AI solution for our proof-of-concept phase. All agents to
 - Retrieves relevant approved assets and/or modular content and templates from digital asset management systems (Sharepoint, Aprimo/Fuse, Veeva Vault Promomats, ShamanGo, Anthill Activator)
 - Option for end user to "save to list" for use by agent for use case 5
 
-#### Use Case 5 — Generate Publish-Ready Marketing Content
+#### Use Case 5  - Generate Publish-Ready Marketing Content
 
 - More efficient content creation with easy reuse or adaption of approved assets within content authoring tools, and generation of new high-quality content based on audience insights and similar campaign performance where no approved assets exist
 - Generate high-quality, compliant draft content (copy, imagery, or variants) directly from approved templates and content blocks where existing
@@ -182,7 +182,7 @@ Create a multi-agentic AI solution for our proof-of-concept phase. All agents to
 - Seamless integration between AI generation and authoring tools, allowing end users to edit, version, and publish without manual transfer
 - Draft assembly adheres to approved templates and constraints (e.g. required blocks included; structural rules applied)
 
-#### Use Case 10 — Asset Tagging
+#### Use Case 10  - Asset Tagging
 
 - Automatic tagging for consistent, meaningful metadata based on content type, therapy area, audience, key message, and usage context for actionable insights, easy retrieval and campaign optimisation
 - Recognises visual, textual, and contextual cues so that relevant tags are suggested or applied automatically in Novartis approved systems (Aprimo/Fuse, Veeva Vault Promomats, ShamanGo and Anthill Activator), aligned with the global metadata model

@@ -2,11 +2,11 @@
 
 ## Status
 
-{Proposed / Accepted / Superseded} — YYYY-MM-DD
+{Proposed / Accepted / Superseded}  - YYYY-MM-DD
 
 ## Context
 
-{What situation prompted this decision? What problem or ambiguity needed resolving? 2–4 sentences max.}
+{What situation prompted this decision? What problem or ambiguity needed resolving? 2 -4 sentences max.}
 
 ## Decision
 
@@ -23,6 +23,6 @@
 
 ## Consequences
 
-- {What changes as a result — for other artefacts, teams, processes, or scope}
+- {What changes as a result  - for other artefacts, teams, processes, or scope}
 - {What is explicitly NOT affected}
 - {Any follow-up actions required}

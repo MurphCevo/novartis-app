@@ -1,5 +1,5 @@
 # BA workspace structure
-> Steering doc — Kiro reads this to understand how this engagement is organised.
+> Steering doc  - Kiro reads this to understand how this engagement is organised.
 
 ## Identity
 
@@ -43,36 +43,36 @@ This workspace uses a sub-Johnny Decimal system (sub-JDEX) nested inside a paren
 
 ## What each area means
 
-### 10-19_engagement — how we are running this
+### 10-19_engagement  - how we are running this
 Anything about the engagement itself, not the client's problem.
 
-- **11_governance/** — decisions log, RACI, change control, assumptions register
-- **12_comms/** — meeting notes (YYYY-MM-DD-topic.md), action items, stakeholder log
-- **14_close-out/** — internal, non-client-facing wrap-up material drafted while the engagement is still open — most notably a masked Precise.io profile write-up and lessons-learnt notes. This is not a client deliverable (see the 40-49_deliverables rule below) — it's collateral for the firm's own use. Files here carry a date prefix (YYYY.MM.DD-{client-slug}-precise-writeup.md) rather than the sub-JDEX {category}.{seq}-{slug} pattern, matching the naming used in the central library they'll eventually join. This folder is a staging area, not the permanent home — see "Close-out library (external)" below: at engagement close, its contents are moved (not copied) into the central library.
-- **19_inbox/** — raw capture: daily notes, half-formed thoughts, unprocessed workshop outputs. This is intentional and AI-readable. Content here is unverified input, not settled project knowledge. Anything older than one week that has not been promoted should be filed properly or deleted.
+- **11_governance/**  - decisions log, RACI, change control, assumptions register
+- **12_comms/**  - meeting notes (YYYY-MM-DD-topic.md), action items, stakeholder log
+- **14_close-out/**  - internal, non-client-facing wrap-up material drafted while the engagement is still open  - most notably a masked Precise.io profile write-up and lessons-learnt notes. This is not a client deliverable (see the 40-49_deliverables rule below)  - it's collateral for the firm's own use. Files here carry a date prefix (YYYY.MM.DD-{client-slug}-precise-writeup.md) rather than the sub-JDEX {category}.{seq}-{slug} pattern, matching the naming used in the central library they'll eventually join. This folder is a staging area, not the permanent home  - see "Close-out library (external)" below: at engagement close, its contents are moved (not copied) into the central library.
+- **19_inbox/**  - raw capture: daily notes, half-formed thoughts, unprocessed workshop outputs. This is intentional and AI-readable. Content here is unverified input, not settled project knowledge. Anything older than one week that has not been promoted should be filed properly or deleted.
 
-### 20-29_problem — what we are solving
+### 20-29_problem  - what we are solving
 The client's situation as we understand it. Source material and constraints.
 
-- **21_context/** — as-is state, pain points, discovery outputs, workshop readouts, interview notes
-- **22_constraints/** — policies, standards, regulatory requirements, assumptions, risks
+- **21_context/**  - as-is state, pain points, discovery outputs, workshop readouts, interview notes
+- **22_constraints/**  - policies, standards, regulatory requirements, assumptions, risks
 
-### 30-39_solution — what we are building
+### 30-39_solution  - what we are building
 Our response to the problem.
 
-- **31_reqs/** — user stories, acceptance criteria, BDD, functional and non-functional requirements
-- **32_design/** — process maps, context diagrams, data flows, architecture diagrams
-- **33_decisions/** — Architecture Decision Records (ADRs), options analysis, trade-off documentation. This is where "why" is recorded, not just "what".
+- **31_reqs/**  - user stories, acceptance criteria, BDD, functional and non-functional requirements
+- **32_design/**  - process maps, context diagrams, data flows, architecture diagrams
+- **33_decisions/**  - Architecture Decision Records (ADRs), options analysis, trade-off documentation. This is where "why" is recorded, not just "what".
 
-### 40-49_deliverables — what we hand over
+### 40-49_deliverables  - what we hand over
 Client-facing outputs only. Nothing goes here that a client couldn't read.
 
-- **41_draft/** — in-review versions, documents under active feedback
-- **42_issued/** — signed-off, versioned, frozen artefacts. Do not overwrite; create a new version.
-- **43_outcomes/** — metrics, client feedback, before/after comparisons, retrospective notes. This is the evidence base for case studies.
+- **41_draft/**  - in-review versions, documents under active feedback
+- **42_issued/**  - signed-off, versioned, frozen artefacts. Do not overwrite; create a new version.
+- **43_outcomes/**  - metrics, client feedback, before/after comparisons, retrospective notes. This is the evidence base for case studies.
 
-### 50-59_archive — superseded material
-- **51_superseded/** — old versions and closed threads. Move here; do not delete. Preserve original filenames.
+### 50-59_archive  - superseded material
+- **51_superseded/**  - old versions and closed threads. Move here; do not delete. Preserve original filenames.
 
 ---
 
@@ -86,11 +86,11 @@ Client-facing outputs only. Nothing goes here that a client couldn't read.
 | File | `{category}.{seq}-{slug}.{ext}` | `31.04-sftp-acceptance-criteria.md` |
 
 - The engagement folder (`11.{ID}`) is the **only JD ID in the path**
-- Sub-JDEX numbers are local — `11` inside this engagement has no relationship to `11` in the parent system
+- Sub-JDEX numbers are local  - `11` inside this engagement has no relationship to `11` in the parent system
 - IDs reappear only at file level
 - `.kiro/` is Kiro-managed and is not numbered
-- 14_close-out/ is the one category with an exception to the file-naming rule above — see its description, it uses a date prefix instead of {category}.{seq}
-- 11.005-close-out/ is the one exception to "the engagement folder is the only JD ID in the path" — it borrows an 11.{ID} slot for the central close-out library rather than a client engagement. See "Close-out library (external)" below.
+- 14_close-out/ is the one category with an exception to the file-naming rule above  - see its description, it uses a date prefix instead of {category}.{seq}
+- 11.005-close-out/ is the one exception to "the engagement folder is the only JD ID in the path"  - it borrows an 11.{ID} slot for the central close-out library rather than a client engagement. See "Close-out library (external)" below.
 
 ---
 
@@ -106,11 +106,11 @@ C:\Users\iluva\OneDrive - Cevo\10-19-projects\11-client-projects\11.005-close-ou
     YYYY.MM.DD-{client-slug}-lessons.md
 ```
 
-This sits alongside individual client engagement folders in 11-client-projects\ and uses the same 11.{ID} addressing (ID 005) even though it isn't itself a client engagement — it's the practitioner's own cross-engagement record. Because it occupies 005 in that sequence, that ID should not be reused for an actual client engagement.
+This sits alongside individual client engagement folders in 11-client-projects\ and uses the same 11.{ID} addressing (ID 005) even though it isn't itself a client engagement  - it's the practitioner's own cross-engagement record. Because it occupies 005 in that sequence, that ID should not be reused for an actual client engagement.
 
-Workflow: while an engagement is open, drafts live locally in that engagement's 10-19_engagement/14_close-out/ (see above). At engagement close, the finished write-up and lessons-learnt notes are moved — not copied — into 11.005-close-out/, the same move-don't-duplicate pattern already used for 51_superseded/. A closed engagement folder should end up with an empty 14_close-out/, with the authoritative copy living centrally.
+Workflow: while an engagement is open, drafts live locally in that engagement's 10-19_engagement/14_close-out/ (see above). At engagement close, the finished write-up and lessons-learnt notes are moved  - not copied  - into 11.005-close-out/, the same move-don't-duplicate pattern already used for 51_superseded/. A closed engagement folder should end up with an empty 14_close-out/, with the authoritative copy living centrally.
 
-This path is not copied in via the primer — it's a standing reference Kiro should know about for every engagement, precisely because copying the whole back-catalogue into each new engagement folder would defeat the point of keeping it central.
+This path is not copied in via the primer  - it's a standing reference Kiro should know about for every engagement, precisely because copying the whole back-catalogue into each new engagement folder would defeat the point of keeping it central.
 
 ---
 
@@ -151,7 +151,7 @@ A `cs-frame.md` file should be created in `19_inbox/` at engagement start with t
 ## Tone and voice
 
 When producing content for this workspace:
-- Use a BA/SA consulting voice — precise, structured, evidence-led
+- Use a BA/SA consulting voice  - precise, structured, evidence-led
 - Distinguish clearly between confirmed facts, working assumptions, and open questions
 - Label draft material explicitly
 - Treat `19_inbox/` content as unverified unless it has been promoted

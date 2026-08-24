@@ -1,4 +1,4 @@
-# RFP Appendix A — Project Autopilot Vision & Context
+# RFP Appendix A  - Project Autopilot Vision & Context
 
 ---
 
@@ -54,18 +54,18 @@ A cross-functional service blueprint mapping the end-to-end content supply chain
 | 5 | Compliance Review | 2 weeks | MKTO, Agency, MLR |
 | 6 | Publishing (Internal) | 3 hours | MKTO, BASE |
 | 7 | Reporting (External) | 2 weeks | MKTO, Agency, Distributor |
-| — | Reporting (Internal) | 1 week | MKTO |
-| — | Publishing (External) | 1 week | MKTO, Agency, Distributor |
+|  - | Reporting (Internal) | 1 week | MKTO |
+|  - | Publishing (External) | 1 week | MKTO, Agency, Distributor |
 
 **Pain Points (by step):**
 
-1. **Research** — No unified search. Relevant materials may get missed.
-2. **Content + Channel Planning** — Planning and reporting are disconnected. Manual segmentation.
-3. **Writing** — Limited Copilot queries. Generic agency and Content Engine outputs.
-4. **Creative + Technical Design** — No in-house capability for design. GenAI outputs prohibited. Lack of templates and limited tools.
-5. **Compliance Review** — Referencing/anchoring is manual and slow. Issues detected late in Veeva. Slow review cycles and content rework. Reviewers overloaded.
-6. **Publishing (Internal)** — Platform issues delay go-live. No AI-generated journeys; campaigns built from scratch. Multiple disconnected publishing platforms.
-7. **Reporting (External)** — Manual compilation; no deep insights. Campaigns not personalised beyond simple segments.
+1. **Research**  - No unified search. Relevant materials may get missed.
+2. **Content + Channel Planning**  - Planning and reporting are disconnected. Manual segmentation.
+3. **Writing**  - Limited Copilot queries. Generic agency and Content Engine outputs.
+4. **Creative + Technical Design**  - No in-house capability for design. GenAI outputs prohibited. Lack of templates and limited tools.
+5. **Compliance Review**  - Referencing/anchoring is manual and slow. Issues detected late in Veeva. Slow review cycles and content rework. Reviewers overloaded.
+6. **Publishing (Internal)**  - Platform issues delay go-live. No AI-generated journeys; campaigns built from scratch. Multiple disconnected publishing platforms.
+7. **Reporting (External)**  - Manual compilation; no deep insights. Campaigns not personalised beyond simple segments.
 
 **Systemic issues:**
 
@@ -140,7 +140,7 @@ Behind every inefficiency are real employees spending more time managing process
 
 ---
 
-## Use Case #4 — Knowledge Discovery
+## Use Case #4  - Knowledge Discovery
 
 | | |
 |---|---|
@@ -178,9 +178,9 @@ Behind every inefficiency are real employees spending more time managing process
 
 - Digital Asset Management systems and repositories (VVPM, Aprimo (Fuse), SharePoint)
 - Strategy & Journey Docs (Sherlock, SharePoint)
-- Modular templates and content blocks (future state — ShamanGo/Anthill Activator)
+- Modular templates and content blocks (future state  - ShamanGo/Anthill Activator)
 - Campaign performance and engagement data (CDH, SFMC, GA4, Veeva Oncore CRM, 3rd Party Publishers)
-- Approved copy and claim libraries (future state — VVPM)
+- Approved copy and claim libraries (future state  - VVPM)
 
 ### Dependencies
 
@@ -192,7 +192,7 @@ Behind every inefficiency are real employees spending more time managing process
 
 ---
 
-## Use Case #5 — Content Generation
+## Use Case #5  - Content Generation
 
 | | |
 |---|---|
@@ -213,10 +213,10 @@ Behind every inefficiency are real employees spending more time managing process
 
 ### Our Future
 
-- Marketing teams want to quickly generate high-quality, compliant draft content — such as copy, imagery, or variants — directly from approved templates and content blocks.
+- Marketing teams want to quickly generate high-quality, compliant draft content  - such as copy, imagery, or variants  - directly from approved templates and content blocks.
 - They want to be able to prompt the AI with campaign objectives or audience details and receive well-structured drafts aligned with therapy area, tone, and compliance standards.
 - Human reviewers will refine and approve the outputs within existing workflows, ensuring consistency and quality.
-- Teams also want seamless integration between AI generation and authoring tools, allowing them to edit, version, and publish without manual transfer — accelerating delivery across markets.
+- Teams also want seamless integration between AI generation and authoring tools, allowing them to edit, version, and publish without manual transfer  - accelerating delivery across markets.
 
 ### Expected Benefits
 
@@ -242,7 +242,7 @@ Behind every inefficiency are real employees spending more time managing process
 
 ---
 
-## Use Case #10 — Asset Tagging
+## Use Case #10  - Asset Tagging
 
 | | |
 |---|---|
@@ -266,7 +266,7 @@ Behind every inefficiency are real employees spending more time managing process
 
 - Teams want new assets to be automatically tagged with consistent, meaningful metadata based on content type, therapy area, audience, key message, and usage context.
 - They want the system to recognise visual, textual, and contextual cues so that relevant tags are suggested or applied automatically, aligned with the global metadata model.
-- This would make assets instantly searchable, traceable, and ready for reuse — without additional manual effort or risk of inconsistency.
+- This would make assets instantly searchable, traceable, and ready for reuse  - without additional manual effort or risk of inconsistency.
 - This would also ensure actionable insights are generated for future campaigns or campaign optimisation.
 
 ### Expected Benefits
@@ -306,24 +306,24 @@ Behind every inefficiency are real employees spending more time managing process
 
 ## Next Steps: Phase 1
 
-### Step 1 — Pilot AI Agent POCs
+### Step 1  - Pilot AI Agent POCs
 
-Build 2–3 agent "skills" to validate integration logic.
+Build 2 -3 agent "skills" to validate integration logic.
 
-- **Mobilise Autopilot Project Manager** — Formalise initiative under a named PM, translate discovery insights into RFP brief, align stakeholders (S)
-- **Design and Run Targeted AI Pilot POCs** — Select 2–3 AI Agent POCs (Knowledge Discovery, Asset Tagging, Content Generation), test pull/push flows (M)
+- **Mobilise Autopilot Project Manager**  - Formalise initiative under a named PM, translate discovery insights into RFP brief, align stakeholders (S)
+- **Design and Run Targeted AI Pilot POCs**  - Select 2 -3 AI Agent POCs (Knowledge Discovery, Asset Tagging, Content Generation), test pull/push flows (M)
 
-### Step 2 — Tech Deep Dive
+### Step 2  - Tech Deep Dive
 
 Understanding the target systems and integration capabilities.
 
-- **Conduct Deep Technical Discovery & Integration Mapping** — Perform technical assessment after pilot learnings: APIs, auth layers, tool readiness, integration constraints. (L)
+- **Conduct Deep Technical Discovery & Integration Mapping**  - Perform technical assessment after pilot learnings: APIs, auth layers, tool readiness, integration constraints. (L)
 
-### Step 3 — Full Roadmap
+### Step 3  - Full Roadmap
 
 Mapping the systems to the use cases to build the roadmap.
 
-- **Build the Full Roadmap & Implementation Plan** — Consolidate business, pilot, and technical insights; define phased rollout plan and Go/No-Go criteria. (L)
+- **Build the Full Roadmap & Implementation Plan**  - Consolidate business, pilot, and technical insights; define phased rollout plan and Go/No-Go criteria. (L)
 - **Dependencies:** Several tools in the marketing stack are being replaced or upgraded. Integration readiness will influence roadmap sequencing and timing.
 
 > **Important:** Timelines will be defined after POC scoping and technical dependency mapping. Current sizing reflects **relative effort**, not duration.
