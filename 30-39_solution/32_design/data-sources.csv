@@ -1,0 +1,5 @@
+ID	AppSrv_ID	Application Service	Source         	Destination    	Data Type      	Data Volume/Frequency   	Criticality 	Sensitivity 	Encrypted In Transit 	Protocol/Transport Method 	Performance Requirements 	Retention/Storage      	Access Controls   	Data Owner 	Compliance Requirements	Integrity Checks 	Backup/Recovery  
+CXN.000							<Critical / High / Medium / Low>	"<Public, Internal, Confidential, Highly Confidential>"	Yes / No								
+CXN.001																	
+CXN.002																	
+CXN.003																	
