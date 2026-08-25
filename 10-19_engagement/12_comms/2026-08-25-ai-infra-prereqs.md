@@ -93,6 +93,220 @@ Jeff Voigt 0 minutes 24 seconds
 Yeah.
 Jeff Voigt 0 minutes 26 seconds
 Yep.
+
+Paul Murphy
+0 minutes 27 seconds0:27
+Paul Murphy 0 minutes 27 seconds
+Cool.
+Paul Murphy 0 minutes 29 seconds
+Okay, so we're ignoring the account structure for the minute.
+
+Raghu Ramireddy
+0 minutes 31 seconds0:31
+Raghu Ramireddy 0 minutes 31 seconds
+I.
+
+Ian Ng
+0 minutes 34 seconds0:34
+Ian Ng 0 minutes 34 seconds
+I think it's worth asking if they have a planning zone and stuff like that, because that helps a lot with all the other stuff that we're doing. But I would defer to Ken. I'm the dumb delivery lead here, not the infra engineer.
+JV
+Jeff Voigt
+0 minutes 36 seconds0:36
+Jeff Voigt 0 minutes 36 seconds
+X.
+KL
+Ken Lawrie
+0 minutes 48 seconds0:48
+Ken Lawrie 0 minutes 48 seconds
+Have we been offered any kind of architecture documents that covers their existing AWS environment?
+JV
+Jeff Voigt
+0 minutes 55 seconds0:55
+Jeff Voigt 0 minutes 55 seconds
+No.
+KL
+Ken Lawrie
+0 minutes 55 seconds0:55
+Ken Lawrie 0 minutes 55 seconds
+Or would we need to do a discovery of some sort?
+DS
+Diganth Sanghvi
+0 minutes 59 seconds0:59
+Diganth Sanghvi 0 minutes 59 seconds
+No, I don't.
+JV
+Jeff Voigt
+0 minutes 59 seconds0:59
+Jeff Voigt 0 minutes 59 seconds
+Or switching it around the other way, we're saying this is what we need to have set up, and we want them to take it away and come back and say what they've got and what they don't need.
+
+Ian Ng
+1 minute 10 seconds1:10
+Ian Ng 1 minute 10 seconds
+So ask the question. Just ask the question. Paul, if you don't mind capturing that, yeah.
+
+Raghu Ramireddy
+10 minutes 55 seconds10:55
+Raghu Ramireddy 10 minutes 55 seconds
+The same part of the bedrock, yeah.
+
+Paul Murphy
+10 minutes 58 seconds10:58
+Paul Murphy 10 minutes 58 seconds
+Mm.
+JV
+Jeff Voigt
+10 minutes 59 seconds10:59
+Jeff Voigt 10 minutes 59 seconds
+So, that's the core; those are the core services we need to have provision, Trent. That's kind of the to be the main bit.
+
+Paul Murphy
+11 minutes 3 seconds11:03
+Paul Murphy 11 minutes 3 seconds
+Yeah.
+KL
+Ken Lawrie
+11 minutes 4 seconds11:04
+Ken Lawrie 11 minutes 4 seconds
+So one thing that's on the list here, US East 1 for WAF. So that's one thing that might be out of the ordinary for them because it uses a different, potentially different region than what they're using.
+
+Paul Murphy
+11 minutes 5 seconds11:05
+Paul Murphy 11 minutes 5 seconds
+Yeah.
+Paul Murphy 11 minutes 23 seconds
+Mhm.
+KL
+Ken Lawrie
+11 minutes 24 seconds11:24
+Ken Lawrie 11 minutes 24 seconds
+So the rest of it is just pretty much standard.
+
+Raghu Ramireddy
+11 minutes 28 seconds11:28
+Raghu Ramireddy 11 minutes 28 seconds
+Awesome. Yep.
+
+Paul Murphy
+11 minutes 30 seconds11:30
+Paul Murphy 11 minutes 30 seconds
+Hope so, maybe we can.
+
+Raghu Ramireddy
+11 minutes 30 seconds11:30
+Raghu Ramireddy 11 minutes 30 seconds
+Have a look, Ken, if there's anything else that you wanted to touch base. We got 55 minutes, so let's best make you the best of the time.
+JV
+Jeff Voigt
+11 minutes 33 seconds11:33
+Jeff Voigt 11 minutes 33 seconds
+Yeah.
+KL
+Ken Lawrie
+11 minutes 36 seconds11:36
+Ken Lawrie 11 minutes 36 seconds
+Yeah, I just think it's a bit of an unusual approach myself. It's like, you know, going to them day one with a list of IAM requirements required. I mean, it's good information for them. I'm sure they're happy to get that information. But I mean, unless we're...
+
+Ian Ng
+11 minutes 45 seconds11:45
+Ian Ng 11 minutes 45 seconds
+Okay.
+JV
+Jeff Voigt
+11 minutes 49 seconds11:49
+Jeff Voigt 11 minutes 49 seconds
+Just.
+KL
+Ken Lawrie
+11 minutes 54 seconds11:54
+Ken Lawrie 11 minutes 54 seconds
+expecting that they're not going to give us S3 access, for example. I mean, is that within the realms of possibility that we're going to say, no, we don't approve S3 for use? I'm just wondering what we're trying to achieve by coming up with like a big long list of all AWS services we could
+
+Raghu Ramireddy
+11 minutes 58 seconds11:58
+Raghu Ramireddy 11 minutes 58 seconds
+Hmm.
+
+Ian Ng
+12 minutes12:00
+Ian Ng 12 minutes
+Yeah.
+JV
+Jeff Voigt
+12 minutes 6 seconds12:06
+Jeff Voigt 12 minutes 6 seconds
+No, I wouldn't have thought so.
+KL
+Ken Lawrie
+12 minutes 15 seconds12:15
+Ken Lawrie 12 minutes 15 seconds
+potentially use. It just seems like a bit of a waste of everyone's time.
+
+Raghu Ramireddy
+12 minutes 19 seconds12:19
+Raghu Ramireddy 12 minutes 19 seconds
+Exactly, yeah.
+KL
+Ken Lawrie
+12 minutes 20 seconds12:20
+Ken Lawrie 12 minutes 20 seconds
+To Ben.
+
+Ian Ng
+12 minutes 20 seconds12:20
+Ian Ng 12 minutes 20 seconds
+This this this project readiness checklist, Diganth, is that specific for ECH?
+DS
+Diganth Sanghvi
+12 minutes 27 seconds12:27
+Diganth Sanghvi 12 minutes 27 seconds
+Yes, most likely, yes, yeah.
+
+Ian Ng
+12 minutes 29 seconds12:29
+Ian Ng 12 minutes 29 seconds
+OK.
+Ian Ng 12 minutes 30 seconds
+So we're using it as a guide, as a template for Novartis this afternoon. Mel's probably going to have a whole different set of requirements, well, some changes because he'll be with Big Rose. So there you go. Okay.
+DS
+Diganth Sanghvi
+12 minutes 36 seconds12:36
+Diganth Sanghvi 12 minutes 36 seconds
+Yeah.
+MK
+Malinda Kapuruge
+12 minutes 37 seconds12:37
+Malinda Kapuruge 12 minutes 37 seconds
+But.
+DS
+Diganth Sanghvi
+12 minutes 44 seconds12:44
+Diganth Sanghvi 12 minutes 44 seconds
+Mm.
+
+Raghu Ramireddy
+12 minutes 45 seconds12:45
+Raghu Ramireddy 12 minutes 45 seconds
+Yeah, it's gonna take this out.
+JV
+Jeff Voigt
+12 minutes 45 seconds12:45
+Jeff Voigt 12 minutes 45 seconds
+Is that is that is that true? I I don't think that is true. I think, again, what we use for ECH is exactly what we're going to use for the big beds and exactly what we're going to use for Nevadas, isn't it?
+
+Ian Ng
+12 minutes 47 seconds12:47
+Ian Ng 12 minutes 47 seconds
+But.
+DS
+Diganth Sanghvi
+12 minutes 58 seconds12:58
+Diganth Sanghvi 12 minutes 58 seconds
+Not entirely true, Jeff, like we will, we will be using it.
+
+
+
 MK
 Malinda Kapuruge
 13 minutes13:00
