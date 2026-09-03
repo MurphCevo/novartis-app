@@ -1,5 +1,133 @@
 # Internal Discovery Modelling
 
+**Date:** 2026-08-31
+**Type:** Internal Cevo working session (architecture modelling / discovery prep) - not a client meeting
+**Duration:** ~68 min across two recordings (56m + 12m)
+**Attendees:** Paul Murphy (BA), Diganth Sanghvi (AI/solution lead), Domenico Campagnolo (Dom - infra/data), Ian Ng (delivery lead), Meiyappan Chidambaram (Mei), Ken Lawrie. Mehul referenced (Snowflake, not present).
+
+> Draft working notes. Summary synthesised from the raw transcript preserved below. Most architecture points are working assumptions pending Novartis confirmation, not settled decisions.
+
+---
+
+## Purpose
+
+Paul (BA) walked through Diganth's proposed target architecture for the Novartis Autopilot POV to build a shared, plain-English understanding and surface the open questions to put to the client. The session covered how data gets in, how it is retrieved for both unstructured and structured queries, and how quality and trust are handled.
+
+---
+
+## Summary
+
+### 1. Data sources and boundary
+- Novartis has ~9 data sources feeding into an ETL pipeline (referred to as "iHub") that lands into Snowflake. Cevo does not own or build iHub.
+- The agreed starting boundary for Cevo is **Snowflake (structured) and S3 (unstructured)**. Anything upstream of that (ETL, source extraction, SFTP) is out of Cevo's scope - taking it on would inflate scope beyond what the ramp period allows.
+- Novartis already has a dedicated Snowflake instance; Cevo does not need to stand one up.
+- Snowflake is treated as an access/query layer over unified data; where the data physically sits underneath is unconfirmed.
+
+### 2. Unstructured data ingestion and indexing
+- Assumption: all unstructured content (PDFs, PowerPoints, Word docs) will be made available in S3 by Novartis. How it lands there is Novartis's responsibility.
+- On landing, AWS Step Functions + Lambda generate metadata per file (file name, contents, owning department, document type) and store it in DynamoDB.
+- Lambda also converts PDFs/Word files to Markdown to save tokens - proposed via an open-source library, which needs Novartis security sign-off (pharma may reject open source).
+- Bedrock Data Automation used for parsing/loading. Bedrock Knowledge Base handles embedding (e.g. Cohere model) into the vector stores.
+- **Hot/cold tiering:** frequently queried files go to OpenSearch Serverless (hot, low latency); the rest go to S3 Vectors (cold, cheaper). Split to be worked out with the client and tuned over time via observability (promote/demote files based on actual usage).
+
+### 3. Unstructured retrieval flow
+- User query hits API Gateway (assumed web/chat UI - UI ownership is an open question, no UI skillset on the team yet).
+- agentcore memory provides per-user short-term (session/episodic) and long-term memory.
+- A lightweight Haiku LLM does intent detection and prompt rewrite (compensates for poor user prompting).
+- Partition router uses DynamoDB metadata to filter down to relevant files/partitions and decide OpenSearch vs S3 Vectors.
+- Parallel retrieval: BM25 (keyword) + KNN (semantic) run together, then Rerank 3.5 re-ranks the chunks. Sonnet synthesises the final human-readable answer.
+
+### 4. Structured retrieval flow
+- Runs as a spun-up **sub-agent** from the main agent loop; the same orchestrating agent can split a query across structured and unstructured paths and merge the results.
+- Text-to-SQL (Haiku or Sonnet, to be decided by experiment). agentcore code interpreter validates query syntax.
+- Only the semantic-layer **schema** is ingested from the structured side (so the LLM knows which tables to query) - assumed static for the POV.
+- Two candidate connection approaches (see Decisions/Open items):
+  1. **Lambda + AWS PrivateLink** to run plain SQL on the Snowflake warehouse (keeps all logic on Cevo/AWS side).
+  2. **JDBC via a scalable compute layer** (ALB + ECS tasks) instead of Lambda, for better scaling and parallel queries.
+  3. **Snowflake Cortex Agent via Snowflake MCP into Bedrock** - delegates query/schema understanding to Snowflake, but loses control and conflicts with the governance requirement to register agents in AWS.
+
+### 5. Caching
+- Amazon MemoryDB (vs ElastiCache - to be compared on cost) caches answers so repeat queries skip retrieval. Cheaper than repeated token cost over time. Caching TTL configurable to Novartis policy (e.g. 24h).
+
+### 6. Data quality and trust
+- Cannot assume clean source data (e.g. a file overwritten with mismatched content vs its metadata). Data quality is proposed as a **Novartis responsibility, captured in the contract**.
+- Multimodal ingestion is required (images needed for marketing outputs), so cannot simply restrict to text. Irrelevant content is filtered out at retrieval via cosine similarity, but quality still matters for correct answers.
+- **Trust is the core risk:** the manual process is trusted today; an AI that "fails silently" could erode trust and collapse adoption. Mitigations proposed:
+  - Continuous evaluation: 10 users over 10 days to build a golden dataset of "what good looks like".
+  - LLM-as-judge weekly evaluation over the corpus, producing a report to flag regressions and trigger troubleshooting.
+  - Thumbs up/down feedback loop (as done on the ECH engagement) feeding the judge.
+  - Note: team lacks healthcare domain expertise, so judging answer correctness is itself hard - reinforces need for client feedback.
+
+### 7. Scope, scale and cost
+- Ongoing/incremental ingestion (new or updated documents after initial load) and schema-change handling are **out of scope for the POV** - initial one-off ingestion only.
+- Scale: think in queries, not users - one user query can fan out into many Snowflake queries. Need Novartis input on POV user numbers and query nature to size the architecture.
+- Access is restricted to a defined data domain/subsection of Snowflake; out-of-domain queries return null (also controls Snowflake cost).
+- A cost model was built on Novartis's dummy figures and returned to them (in SharePoint). Token volumes came from Novartis, not Cevo. Caveat communicated: testing likely costs more than production.
+
+---
+
+## Decisions (working)
+
+| ID | Decision | Status |
+|---|---|---|
+| DEC-001 | Cevo's scope starts at Snowflake (structured) and S3 (unstructured); everything upstream (iHub/ETL) is out of scope | Agreed (team), pending client confirmation |
+| DEC-002 | Ongoing/incremental ingestion and schema-change handling are out of scope for the POV | Agreed (team) |
+| DEC-003 | Cannot use Snowflake Cortex Agent as the primary agent - governance requires agents registered in AWS agentcore | Accepted, with Cortex-via-MCP retained as a documented alternative |
+| DEC-004 | Data quality to be treated as Novartis's responsibility and reflected in the contract | Proposed |
+
+> These IDs match the central Decision Record ([21.01f](../../20-29_problem/21_context/21.01f-decision-record.md)), where each decision is recorded in full. This note is the working capture; the register is authoritative.
+
+---
+
+## Assumptions to validate
+
+| ID | Assumption | Impact if wrong |
+|---|---|---|
+| ASM-015 | All structured data reaches Snowflake via iHub ETL | Data availability / boundary |
+| ASM-009 | All unstructured data (PDF, PPT, Word) is made available in S3 by Novartis | Core to ingestion pipeline - large purple assumption |
+| ASM-010 | ~200 GB of unstructured data in total | Tiering and cost design |
+| ASM-011 | Snowflake schema stays static for the POV duration | Text-to-SQL accuracy |
+| ASM-012 | There is a chat/web UI; UI build ownership unresolved | Delivery - no UI skillset on team |
+| ASM-013 | Novartis can indicate which files are most frequently used (hot vs cold) | Tiering accuracy; tunable via observability |
+
+> IDs match the central Assumptions Register ([21.01h](../../20-29_problem/21_context/21.01h-assumptions-register.md)), which holds the full validation detail. ASM-009 to ASM-013 were promoted there from this session; ASM-015 (iHub ETL boundary premise) is added to the register alongside them.
+
+---
+
+## Open questions for Novartis
+
+| ID | Question |
+|---|---|
+| Q-001 | Is iHub a Novartis-built tool or off-the-shelf, and does all structured data actually route through it? |
+| Q-002 | Where is the data physically stored beneath Snowflake? |
+| Q-003 | Is metadata already captured for unstructured files (e.g. an S3 path + doc-type table)? A metadata link would simplify the pipeline significantly. |
+| Q-004 | How will unstructured data (SharePoint, Word, PPT) actually be delivered into S3? |
+| Q-005 | Can we use an open-source library to convert PDFs to Markdown, or does security prohibit open source? |
+| Q-006 | How do we connect to Snowflake - can they PrivateLink / VPC-endpoint the instance, and will they provide a Snowflake MCP with schema? |
+| Q-007 | Are Cevo building the semantic layer, or is Novartis? (Determines whether Mehul or Dom leads.) |
+| Q-008 | Who are the POV users, how many, and what is the nature/volume of their queries (for scaling)? |
+| Q-009 | What is the success criteria for the POV? What is the benchmark/"golden" campaign? (Client to define.) |
+| Q-010 | Is there AWS funding attached to this project? (Sean/Brian question.) |
+| Q-011 | Does the connection approach align with what the SOW/RFQ response committed to? |
+
+> IDs match the central Questions Register ([21.01j](../../20-29_problem/21_context/21.01j-questions-register.md)), which holds owners, why-it-matters, and the discovery-workshop question each maps to. This note is the working capture; the register is authoritative.
+
+---
+
+## Actions
+
+| # | Action | Owner |
+|---|--------|-------|
+| 1 | Transcribe/write up this session (permissions meant not everyone could work off Confluence live) | Paul |
+| 2 | Investigate best Snowflake connection option (Cortex/MCP vs JDBC vs Lambda + PrivateLink) and provide an alternate-architecture diagram to attach | Dom |
+| 3 | Feed Snowflake questions to Mehul ahead of his talk with Novartis's head of data in the coming weeks | Ian / Dom / Mehul |
+| 4 | Finish the evaluation architecture and publish to Confluence (~2 days) | Diganth |
+| 5 | Compare MemoryDB vs ElastiCache on cost for caching layer | Diganth / Dom |
+| 6 | Forward the cost model sheet for review | Diganth |
+| 7 | Prepare data/inputs so Week 1 workshops can run (Diganth not on-site Week 1; Paul + Ken to run) | Diganth |
+
+---
+
 ## Raw Transcript - Part 1
 
 Novartis Autopilot - Discovery Modelling-20260831_150433-Meeting Recording
