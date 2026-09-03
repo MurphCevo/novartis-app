@@ -1,5 +1,13 @@
 # Internal Discovery Modelling
 
+> **TL;DR** - Internal Cevo working session where Paul (BA) walked the team through Diganth's proposed target architecture for the Novartis Autopilot POV, in plain English, to surface open questions for the client.
+> - **Scope boundary:** Cevo starts at Snowflake (structured) and S3 (unstructured). Everything upstream (iHub/ETL, SFTP, source extraction) is out of scope. Ongoing/incremental ingestion and schema changes are also out for the POV - initial one-off load only.
+> - **Unstructured flow:** Novartis lands files in S3 - Step Functions/Lambda generate metadata (DynamoDB) and convert docs to Markdown - Bedrock KB embeds into hot (OpenSearch Serverless) / cold (S3 Vectors) tiers. Retrieval: intent detection (Haiku) - partition router - parallel BM25 + KNN - Rerank 3.5 - Sonnet synthesis.
+> - **Structured flow:** spun-up sub-agent does text-to-SQL against Snowflake. Connection approach is open - Lambda + PrivateLink vs JDBC (ALB + ECS) vs Snowflake Cortex/MCP. Cortex-as-primary-agent ruled out (governance requires agents registered in AWS agentcore).
+> - **Trust is the core risk:** an AI that fails silently could collapse adoption. Mitigations: golden dataset (10 users x 10 days), weekly LLM-as-judge evaluation, thumbs up/down feedback loop.
+> - **Key open items for Novartis:** how unstructured data reaches S3 (big assumption), whether metadata already exists, Snowflake connection method, semantic-layer ownership, POV user/query numbers and success criteria.
+> - **Working decisions:** DEC-001 (Snowflake+S3 boundary), DEC-002 (no incremental ingestion in POV), DEC-003 (no Cortex as primary agent), DEC-004 (data quality is Novartis's contractual responsibility).
+
 **Date:** 2026-08-31
 **Type:** Internal Cevo working session (architecture modelling / discovery prep) - not a client meeting
 **Duration:** ~68 min across two recordings (56m + 12m)
